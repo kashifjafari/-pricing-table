@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pricing-table.css">
+    <title>Toggle Pricing Table</title>
+</head>
+<body>
+    <div class="pricing-table">
+        <header id="pricing-header">
+            <h2 class="main-heading">Choose The Package That Suit You</h2>
+            <div id="toggle-bar">
+                <label id="monthly" class="tb-labels">Monthly</label>
+                <div id="toggle-container" onclick="changeToggle()">
+                    <div id="toggle"></div>
+                </div>
+                <label id="annually" class="tb-labels">Annually</label>
+                <!-- this is for desktop -->
+                <span class="discount-text ">20% Discount</span>
+            </div>
+            <!-- this is for mobile  -->
+            <div style="text-align: -webkit-center;">
+                <span class="discount-text display-n">20% Discount</span>
+            </div>
+            
+        </header>
+        <main id="pricing-div-container">
+            <div id="basic-div" class="pricing-divs">
+                <div class="plan-title" >
+                    <h2>Forever Free</h2>
+                <p>For the basics</p>
+                </div>
+                
+                <h3 class="h3"><span>$</span>0.00</h3>
+                <p class="price-bottom">Per agent Per month</p>
+                <div class="link-button">
+                    <a href="#0">Try For Free</a>
+                </div>
+                <div class="details-div">
+                    <p><span class="tick-svg">&#10003;</span><b>250</b> Requests Per Month</p>
+                    <p><span class="tick-svg">&#10003;</span><b>2</b> Voice Channels</p>
+                    <p><span class="tick-svg">&#10003;</span><b>1 GB</b> Data Storage</p>
+                    <p><span class="tick-svg">&#10003;</span>Chat Widget</p>
+                    <p><span class="tick-svg">&#10003;</span>RealTime Overview</p>
+                </div>
+            </div>
+            <div id="professional-div" class="pricing-divs">
+               
+                    <div class="plan-title" >
+                        <h2>Team</h2>
+                    <p>For Small Team</p>
+                    </div>
+                    
+                    <h3 class="h3"><span>$</span>39.60</h3>
+                    <p class="price-bottom">Per agent Per month</p>
+                    <div class="link-button">
+                   <a href="#0">Get Started</a>
+                   </div>
+                    <div class="details-div">
+                        <p><span class="tick-svg">&#10003;</span><b>1000</b> Requests Per Month</p>
+                        <p><span class="tick-svg">&#10003;</span><b>25</b> Voice Channels</p>
+                        <p><span class="tick-svg">&#10003;</span><b>500 GB</b> Data Storage</p>
+                        <p><span class="tick-svg">&#10003;</span>Chat Widget</p>
+                        <p><span class="tick-svg">&#10003;</span>RealTime Overview</p>
+                    </div>
+            </div>
+            <div id="master-div" class="pricing-divs">
+                    <div class="plan-title" >
+                        <h2>Professionals</h2>
+                    <p>For the Professionals</p>
+                    </div>
+                    
+                    <h3 class="h3"><span>$</span>103.60</h3>
+                    <p class="price-bottom">Per agent Per month</p>
+                    <div class="link-button">
+                   <a href="#0">Get Started</a>
+                   </div>
+                    <div class="details-div">
+                        <p><span class="tick-svg">&#10003;</span><b>5000</b> Requests Per Month</p>
+                        <p><span class="tick-svg">&#10003;</span><b>100</b> Voice Channels</p>
+                        <p><span class="tick-svg">&#10003;</span><b>1 TB</b> Data Storage</p>
+                        <p><span class="tick-svg">&#10003;</span>Chat Widget</p>
+                        <p><span class="tick-svg">&#10003;</span>RealTime Overview</p>
+                    </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        
+function changeToggle() {
+    let toggleContainer = document.getElementById("toggle-container");
+    let toggle = document.getElementById("toggle");
+    let h3 = document.getElementsByClassName("h3");
+    if(toggle.style.float!="right"){
+        toggle.style.float = "right";
+        // month price
+        h3[0].innerHTML ="<span>$</span>0.00";
+        h3[1].innerHTML ="<span>$</span>249.99";
+        h3[2].innerHTML ="<span>$</span>399.99";
+        toggleContainer.classList.add('on');
+    }
+    // year price 
+    else{    
+        toggle.style.float ="none";
+        h3[0].innerHTML ="<span>$</span>0.00";
+        h3[1].innerHTML ="<span>$</span>39.60";
+        h3[2].innerHTML ="<span>$</span>103.60";
+        toggleContainer.classList.remove('on');
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+.pricing-table{
+    color: black !important;
+    font-family: sans-serif;
+    padding: 30px 0px;
+}
+
+#pricing-header{
+    text-align: center;
+    margin-top: 2rem;
+   }
+
+#pricing-header > .main-heading {
+    font-size: 1.3rem;
+}
+
+#pricing-header > #toggle-bar{
+    margin-top: 2.4rem;
+}
+
+#toggle-bar > .tb-labels{
+    vertical-align: 50%;
+    font-size: 15px;
+    color: hsl(0, 0%, 0%);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+#toggle-bar > #annually{
+    margin-right: 1rem;
+}
+
+#toggle-bar > #monthly{
+    margin-left: 1rem;
+}
+
+#toggle-bar > #toggle-container{
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 2.88rem;
+    height: 1.65rem;
+    padding: .225rem;
+    border-radius: 2rem;
+    background-color: black;
+}
+#toggle-container.on{
+    background-color: #29bd8c !important;
+}
+
+#toggle-container > #toggle{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#pricing-div-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.8rem;
+    text-align: start;
+}
+
+#pricing-div-container > .pricing-divs{
+    width: 18.2rem;
+    box-sizing: border-box;
+    border-radius: 3%;    
+    padding: 15px 30px;
+    border: 1px solid black;
+}
+
+
+
+.pricing-divs:not(#professional-div) {
+    height: 27rem;
+    margin-top: 1.15em;
+    padding-top: 1.2rem;
+    background-color: white;
+    color: black;
+
+}
+
+
+#pricing-div-container > .pricing-divs > h2 {
+    font-size: .9rem;
+}
+
+
+#pricing-div-container > .pricing-divs > h3 {
+    margin: 1.5rem 0;
+    font-size: 2.5rem;
+}
+
+
+#pricing-div-container > #professional-div a{
+background-color: black !important;
+color: white !important;
+}
+#pricing-div-container > #professional-div a:hover{
+background-color: white !important;
+color: black !important;
+}
+#pricing-div-container > #professional-div {
+    height: 29.5rem;
+    padding-top: 2.4rem;
+    background-color: #4AD4A6;
+    margin: 0px 15px;
+}
+
+#pricing-div-container > .pricing-divs > h3 > span {
+    vertical-align: 15%;
+    margin-right: .15rem;
+    font-size: 2.1rem;
+}
+
+#pricing-div-container .details-div > p{
+    margin: 0;
+    padding: .35rem 0;
+    font-size: .78rem;
+    text-align: left !important;
+}
+
+#pricing-div-container > .pricing-divs > .link-button a {
+   padding: 15px 35px;
+   text-decoration: none;
+    margin-top: 0.6rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 13px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+#pricing-div-container > .pricing-divs > .link-button a:hover{
+    background-color: black;
+    color: white;
+
+}
+
+.plan-title h2{
+margin: 0px;
+margin-bottom: 2px;
+
+}
+.plan-title p{
+    margin: 0px;
+    font-size: 0.78rem;
+}
+.tick-svg{
+    margin-right: 10px;
+    font-weight: bold;
+
+}
+.display-n{
+    display: none;
+ }
+
+
+
+@media (max-width: 760px) {
+
+ #toggle-bar .discount-text{
+    display: none;
+ }
+ .discount-text.display-n{
+    display: block;
+    position: relative !important;
+    width: fit-content;
+ }
+
+
+    #pricing-div-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pricing-div-container > #professional-div {
+        height: 28rem;
+        padding-top: 1.2rem;
+        margin-top: 15px;
+    }
+}
+
+   .discount-text{
+    background-color: #f4f4f4;
+    color: #29bd8c;
+    padding: 5px 15px;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -2px;
+   }
+
+   .price-bottom{
+    text-align: left; 
+    font-size: 0.78rem;
+   }
+
+   .link-button{
+    margin: 40px 0px;
+    text-align: center;
+   }
